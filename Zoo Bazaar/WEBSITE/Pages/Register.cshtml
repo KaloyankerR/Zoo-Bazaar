@@ -1,0 +1,54 @@
+﻿@page
+@model WEBSITE.Pages.RegisterModel
+@{
+}
+
+<div class="login-bg">
+    <div class="login-wrapper" style="margin-top: 100px;">
+        <form method="post" action="">
+            <h1>Register</h1>
+            <div class="input-box">
+                <input type="text" placeholder="First Name" id="firstName" name="FirstName" required>
+
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Last Name" id="lastName" name="LastName" required>
+
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="Email" id="email" name="Email" required>
+
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Phone" id="phone" name="Phone" required>
+
+            </div>
+            <div class="input-box">
+                <input type="date" placeholder="Date Of Birth" id="dateOfBirth" name="DateOfBirth" required>
+
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Address" id="address" name="Address" required>
+
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" id="password" name="Password" required>
+
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Confirm Password" id="confirmPassword" name="ConfirmPassword" required>
+
+            </div>
+
+
+
+            <button type="submit" class="login-btn">Register</button>
+
+            <div class="remember-forgot" style="margin-top: 10px;">
+                <label><input type="checkbox" id="MyCheckbox" name="MyCheckbox">Subscribe!</label>
+
+            </div>
+
+        </form>
+    </div>
+</div>

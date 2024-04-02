@@ -1,0 +1,34 @@
+﻿@page
+@using BusinessLogicObjectLayer
+@model WEBSITE.Pages.ScheduleModel
+@{
+}
+<div class="event-container">
+    <h3 class="year">2023</h3>
+
+    @foreach(Shift shift in Model.EmployeeShifts)
+    {
+        <div class="event">
+            <div class="event-left">
+                <div class="event-date">
+                    <div class="date">@shift.ShiftStart.Day</div>
+                    <div class="month">@Model.GetMonthName(@shift.ShiftStart.Month)</div>
+                </div>
+            </div>
+
+            <div class="event-right">
+                <h3 class="event-title">Employee shift - @shift.Position.ToString()</h3>
+
+                <div class="event-descrition">
+                    @Model.GetShiftType(shift.ShiftStart)
+                </div>
+
+                <div class="event-timing">
+                    <img src="images/Time.png"> @shift.ShiftStart.Hour:@shift.ShiftStart.Minute - @shift.ShiftEnd.Hour:@shift.ShiftEnd.Minute
+                </div>
+            </div>
+        </div>
+    }
+
+    <h3 class="year">2024</h3>
+</div>

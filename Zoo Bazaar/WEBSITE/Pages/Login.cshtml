@@ -1,0 +1,37 @@
+﻿@page
+@model WEBSITE.Pages.LoginModel
+@{
+}
+<div class="login-bg">
+    <div class="login-wrapper" style="margin-top: 200px;">
+        <form method="post">
+            <h1>Login</h1>
+            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+            {
+                <div class="alert alert-danger">@Model.ErrorMessage</div>
+            }
+            <div class="input-box">
+                <input type="email" id="email" name="Email" placeholder="Email" required>
+
+            </div>
+            <div class="input-box">
+                <input type="password" id="password" name="Password" placeholder="Password" required>
+
+
+            </div>
+
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+
+            <div class="register-link">
+                <p>Don't have an account?</p>
+                <a asp-page="Register">Register here!</a>
+            </div>
+
+        </form>
+    </div>
+</div>

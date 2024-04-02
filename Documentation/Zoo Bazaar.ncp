@@ -1,0 +1,426 @@
+<Project>
+  <Name>Zoo Bazaar</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>UML</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Employee</Name>
+        <Access>Public</Access>
+        <Location left="409" top="51" />
+        <Size width="214" height="366" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int employeeID</Member>
+        <Member type="Field">string firstName</Member>
+        <Member type="Field">string lastName</Member>
+        <Member type="Field">string gender</Member>
+        <Member type="Field">string email</Member>
+        <Member type="Field">string phone</Member>
+        <Member type="Field">string password</Member>
+        <Member type="Field">dateOnly dateOfBirth</Member>
+        <Member type="Field">ContractType contractType</Member>
+        <Member type="Field">string BSN</Member>
+        <Member type="Field">string emergancyContactName</Member>
+        <Member type="Field">string emergancyContactLastName</Member>
+        <Member type="Field">string emergancyContactPhone</Member>
+        <Member type="Field">Access accessType</Member>
+        <Member type="Field">int minHours</Member>
+        <Member type="Field">int maxHours</Member>
+        <Member type="Field">string IBAN</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>Contract</Name>
+        <Access>Public</Access>
+        <Location left="719" top="51" />
+        <Size width="162" height="98" />
+        <Collapsed>False</Collapsed>
+        <Value>FullTime</Value>
+        <Value>PartTime</Value>
+      </Entity>
+      <Entity type="Enum">
+        <Name>Position</Name>
+        <Access>Public</Access>
+        <Location left="719" top="215" />
+        <Size width="162" height="138" />
+        <Collapsed>False</Collapsed>
+        <Value>Administration</Value>
+        <Value>HR</Value>
+        <Value>Caretaker</Value>
+        <Value>Veterinary</Value>
+      </Entity>
+      <Entity type="Class">
+        <Name>Administration</Name>
+        <Access>Public</Access>
+        <Location left="78" top="497" />
+        <Size width="253" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Access Administration</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>HR</Name>
+        <Access>Public</Access>
+        <Location left="370" top="497" />
+        <Size width="253" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string previousJob</Member>
+        <Member type="Field">bytel[] managmentCourseCertificate</Member>
+        <Member type="Field">Access HR</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Caretaker</Name>
+        <Access>Public</Access>
+        <Location left="646" top="497" />
+        <Size width="302" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">List&lt;Region&gt; regionsOfZoo</Member>
+        <Member type="Field">List&lt;Animal&gt; animalsOfZooEmployeerCanTakeCareOf</Member>
+        <Member type="Field">List&lt;Shift&gt; shifts</Member>
+        <Member type="Field">Access Caretaker</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Veterinary</Name>
+        <Access>Public</Access>
+        <Location left="1001" top="497" />
+        <Size width="225" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">byte[] veterinaryCertificate</Member>
+        <Member type="Field">List&lt;Shift&gt; shifts</Member>
+        <Member type="Field">Access Veterinary</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Animal</Name>
+        <Access>Public</Access>
+        <Location left="1528" top="53" />
+        <Size width="207" height="332" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int animalID</Member>
+        <Member type="Field">string name</Member>
+        <Member type="Field">dateOnly DateOfBirth</Member>
+        <Member type="Field">int age</Member>
+        <Member type="Field">string gender</Member>
+        <Member type="Field">string animalType</Member>
+        <Member type="Field">string breed</Member>
+        <Member type="Field">TypeOfFood typeOfFood</Member>
+        <Member type="Field">string cage</Member>
+        <Member type="Field">List&lt;MedicalReport&gt; miedicalCard</Member>
+        <Member type="Field">List&lt;Medicament&gt; medicaments</Member>
+        <Member type="Field">string visitorAvailability</Member>
+        <Member type="Field">List&lt;feedingSchedule&gt; feedingSchedule</Member>
+        <Member type="Field">string adopterName</Member>
+        <Member type="Field">string descripition</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ZooRegion</Name>
+        <Access>Public</Access>
+        <Location left="1809" top="53" />
+        <Size width="162" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int regionID</Member>
+        <Member type="Field">string regionName</Member>
+        <Member type="Field">List&lt;Cage&gt; cages</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Cage</Name>
+        <Access>Public</Access>
+        <Location left="2028" top="53" />
+        <Size width="224" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int cageID</Member>
+        <Member type="Field">string cageName</Member>
+        <Member type="Field">ZooRegion zooRegion</Member>
+        <Member type="Field">string breedOfAnimal</Member>
+        <Member type="Field">int capacity</Member>
+        <Member type="Field">List&lt;Animal&gt; animalsAssigned</Member>
+        <Member type="Field">int animalsInCageCount</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MedicalReport</Name>
+        <Access>Public</Access>
+        <Location left="1223" top="51" />
+        <Size width="215" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int ID</Member>
+        <Member type="Field">Animal animal</Member>
+        <Member type="Field">string medicalReportTitle</Member>
+        <Member type="Field">string medicalDescription</Member>
+        <Member type="Field">string medicaments</Member>
+        <Member type="Field">string treatment</Member>
+        <Member type="Field">dateTime meciacmentsStart</Member>
+        <Member type="Field">dateTime medicamentsEnd</Member>
+        <Member type="Field">string medicamentsTakeSchedule</Member>
+        <Member type="Field">bool treatmentFinished</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Shift</Name>
+        <Access>Public</Access>
+        <Location left="897" top="884" />
+        <Size width="212" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string ShiftID</Member>
+        <Member type="Field">ZooRegion region</Member>
+        <Member type="Field">Position position</Member>
+        <Member type="Field">dateTime shiftStart</Member>
+        <Member type="Field">dateTime shiftEnd</Member>
+        <Member type="Field">int capacity</Member>
+        <Member type="Field">List&lt;Employee&gt; employeesAssigned</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>Access</Name>
+        <Access>Public</Access>
+        <Location left="546" top="805" />
+        <Size width="162" height="129" />
+        <Collapsed>False</Collapsed>
+        <Value>Administration</Value>
+        <Value>HR</Value>
+        <Value>Caretaker</Value>
+        <Value>Veterinary</Value>
+      </Entity>
+      <Entity type="Enum">
+        <Name>TypeOfFood</Name>
+        <Access>Public</Access>
+        <Location left="1657" top="442" />
+        <Size width="210" height="146" />
+        <Collapsed>False</Collapsed>
+        <Value>Meat</Value>
+        <Value>Grass</Value>
+        <Value>Seeds</Value>
+        <Value>SeaLifeFood</Value>
+        <Value>Granulas</Value>
+      </Entity>
+      <Entity type="Class">
+        <Name>FeedingSchedule</Name>
+        <Access>Public</Access>
+        <Location left="1347" top="519" />
+        <Size width="216" height="181" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int feedingScheduleID</Member>
+        <Member type="Field">Animal animal</Member>
+        <Member type="Field">TimeOfDay TimeOfDay</Member>
+        <Member type="Field">TypeOfFood food</Member>
+        <Member type="Field">string feedingQuantity</Member>
+        <Member type="Field">DateTime feedingTime</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>TimeOfDay</Name>
+        <Access>Public</Access>
+        <Location left="1657" top="638" />
+        <Size width="162" height="139" />
+        <Collapsed>False</Collapsed>
+        <Value>Breakfast</Value>
+        <Value>Lunch</Value>
+        <Value>Aftrenoon</Value>
+        <Value>Dinner</Value>
+      </Entity>
+      <Entity type="Class">
+        <Name>ZooInventory</Name>
+        <Access>Public</Access>
+        <Location left="17" top="833" />
+        <Size width="300" height="179" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int meat</Member>
+        <Member type="Field">int grass</Member>
+        <Member type="Field">int seeds</Member>
+        <Member type="Field">int SeaLifeFood</Member>
+        <Member type="Field">int granula</Member>
+        <Member type="Field">List&lt;Medicaments&gt; medicaments</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Medicaments</Name>
+        <Access>Public</Access>
+        <Location left="78" top="1066" />
+        <Size width="162" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int medicamentID</Member>
+        <Member type="Field">string medicamentID</Member>
+        <Member type="Field">int quantity</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Dependency" first="0" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="0" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="3" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="4" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="5" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="6" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="9" second="8">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="7" second="9">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>2003</X>
+          <Y>253</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>0..1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="7" second="10">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>0..1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="11" second="8">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1151</X>
+          <Y>942</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Dependency" first="3" second="12">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="4" second="12">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="5" second="12">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="6" second="12">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="11" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1146</X>
+          <Y>908</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1267</X>
+          <Y>333</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="5" second="11">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="11">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Dependency" first="7" second="13">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="14" second="15">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="14" second="13">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="7" second="14">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1585</X>
+          <Y>410</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="16" second="17">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="16">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>158</X>
+          <Y>740</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>

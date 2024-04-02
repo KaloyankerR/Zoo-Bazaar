@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Zoo Bazaar"] - Zoo Bazaar</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <!-- font awesome -->
+    <link rel="icon" type="image/png" href="images/logo2.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    @*    <script src="/lib/jquery/dist/jquery.min.js"></script>*@
+    <script src="/js/site.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+</head>
+<body>
+    <header class="header">
+
+        <a asp-page="/Index" class="logo"> <i class="fas fa-paw"></i>Zoo Bazaar</a>
+
+        <nav class="navbar">
+            <a asp-page="/Index" fragment="home">home</a>
+            <a asp-page="/Index" fragment="about">about</a>
+            <a asp-page="/Index" fragment="gallery">gallery</a>
+            <a asp-page="/Index" fragment="animal">animal</a>
+            <a asp-page="/Index" fragment="pricing">pricing</a>
+            <a asp-page="/Index" fragment="contact">contact</a>
+        </nav>
+
+
+        @if (Context.Session.Get("CustomerID") != null || Context.Session.Get("EmployeeID") != null)
+        {
+            <span class="span" style="font-size: 14px;">@Context.Session.GetString("FullName")</span>
+        }
+        else
+        {
+            <div class="icons">
+                <a asp-page="/Login">
+                    <div id="login-btn" class="fas fa-user"></div>
+                    <div id="menu-btn" class="fas fa-bars"></div>
+                </a>
+            </div>
+
+    
+
+            
+        }
+
+
+
+
+    </header>
+
+    <main role="main" class="pb-3">
+        @if (TempData.ContainsKey("Message"))
+        {
+            <script>
+                alert('@TempData["Message"]');
+            </script>
+        }
+        @RenderBody()
+    </main>
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3><i class="fas fa-paw"></i> zoo bazaar</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p class="links"><i class="fas fa-clock"></i>monday - friday</p>
+                <p class="days">7:00AM - 11:00PM</p>
+            </div>
+
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#" class="links"><i class="fas fa-phone"></i> 1245-147-2589</a>
+                <a href="#" class="links"><i class="fas fa-phone"></i> 1245-147-2589</a>
+                <a href="#" class="links"><i class="fas fa-envelope"></i> zoobazaar@gmail.com</a>
+                <a href="#" class="links"><i class="fas fa-map-marker-alt"></i> Eindhoven, The Netherlands</a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i>home</a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i>about</a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i>gallery</a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i>animal</a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i>pricing</a>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <input type="email" placeholder="Your Email" class="email">
+                <a href="#" class="btn">subscribe</a>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="credit">&copy; 2022 zoolife. All rights reserved by <a href="#" class="link">Zoo Bazaar</a></div>
+
+    </section>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

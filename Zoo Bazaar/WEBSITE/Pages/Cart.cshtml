@@ -1,0 +1,97 @@
+﻿@page
+@model WEBSITE.Pages.CartModel
+@{
+}
+<h1 style="margin-top:100px; text-align: center; font-size:28px; color: #000000">  SHOPPING CART  </h1>
+
+
+<article>
+
+
+    <section id="cart" class="secction-p1" style="margin-top: 50px;">
+        <table width="100%">
+            <thead>
+                <tr>
+
+                    <td>PRODUCT</td>
+                    <td>PRICE</td>
+                    <td>QUANTITY</td>
+                    <td>SUBTOTAL</td>
+                    <td>EDIT</td>
+                    <td>REMOVE</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+
+                    <td>KIDS</td>
+                    <td>7.50 €</td>
+                    <td><input type="number" value="1"></td>
+                    <td>7.50 €</td>
+                    <td>
+                        <a href="EditProduct.html">
+                            <img src="images/EDIT.png" style="width: 30px; height: 30px; margin-left: auto;
+                        margin-right: auto;" alt="">
+                    </td>
+                    <td><a href="#" class="cancel-button"></td>
+                </tr>
+                <tr>
+
+
+                    <td>STUDENTS</td>
+                    <td>10 €</td>
+                    <td><input type="number" value="2"></td>
+                    <td>20 €</td>
+                    <td>
+                        <a href="#">
+                            <img src="images/EDIT.png" style="width: 30px; height: 30px; margin-left: auto;
+                        margin-right: auto;" alt="">
+                    </td>
+                    <td><a href="#" class="cancel-button"></td>
+                </tr>
+                <tr>
+
+
+
+                    <td>ADULTS</td>
+                    <td>15 €</td>
+                    <td><input type="number" value="1"></td>
+                    <td>15 €</td>
+                    <td>
+                        <a href="#">
+                            <img src="images/EDIT.png" style="width: 30px; height: 30px; margin-left: auto;
+                        margin-right: auto;" alt="">
+                    </td>
+                    <td><a href="#" class="cancel-button"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td>8.30 €</td>
+                </tr>
+                <tr>
+                    <td>Delivery</td>
+                    <td>3.99 €</td>
+                </tr>
+                <tr>
+                    <td><strong>TOTAL</strong></td>
+                    <td>12.29 €</td>
+                </tr>
+            </table>
+            <a href="#" class="btn btn-primary" style="margin-top: 20px;">
+                <span class="text text-1">Продължи</span>
+                <span class="text text-2" aria-hidden="true">Продължи</span>
+            </a>
+        </div>
+    </section>
+
+</article>
