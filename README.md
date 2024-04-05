@@ -1,6 +1,6 @@
-# Media Bazaar Employee and Storage Management System
+# Zoo Bazaar Employee and Storage Management System
 
-![Media Bazaar Logo](Documentation/zoo.png)
+![Zoo Bazaar Logo](Documentation/zoo.png)
 
 ## Table of Contents
 - [Introduction](#introduction)
